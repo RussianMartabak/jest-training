@@ -84,4 +84,13 @@ function caesarCipher(string, shift) {
     };
     return shiftedStringArray.join('');
 }
-export { capitalize, reverseString, calculator, caesarCipher };
+
+function analyzeArray(array) {
+  let returnObject = {}
+  returnObject.average = array.reduce((a, b) => a + b) / array.length;
+  returnObject.length = array.length;
+  returnObject.max = array.reduce((a, b) => Math.max(a, b));
+  returnObject.min = array.reduce((a, b) => Math.min(a, b)); 
+  return returnObject;
+}
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray};

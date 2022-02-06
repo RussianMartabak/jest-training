@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator, caesarCipher } from "./main";
+import { capitalize, reverseString, calculator, caesarCipher, analyzeArray } from "./main";
 
 //capitalize tests
 
@@ -56,3 +56,13 @@ test('Correctly cipher a string with spaces and cases', () => {
 test('Correctly cipher a string with Z', () => {
     expect(caesarCipher('I\'m zaky', 2)).toBe('K\'o bcma');
 });
+
+//analyze array
+test('Analyze array', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    })
+})
